@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>
+			My Web
+		</title>
+		<script src = "1.js" >
+		</script >
+	</head>
+	<body >
+	<nav class = "navbar">
+	<div style ="font-size: 26px; background-color: green; color: red; padding-left: 500px">
+		Some text
+		</br>
+		<button onclick = "myButtonOnClick()" style ="color: blue">My button</button>
+		</br>
+		<label id = "l"></label>
+		</br>
+		<table border = "2" align ="left">
+			<th>
+			1
+			</th>
+			<th>
+			2
+			</th>
+			<tr>
+				<td>11</td>
+				<td>12</td>
+			</tr>
+			<tr>
+				<td>12</td>
+				<td>22</td>
+			</tr>
+		</table>
+		</br>
+		</tr>
+		</br>
+		</br>
+		</tr>
+		</br>
+	</div>
+	</nav>
+	<div style ="font-size: 26px; background-color: white; color: black; padding-left: 500px">
+		<form>
+			<input type = "text" id ="t">
+			</br>
+			<span style = "background-color: black; color: white;">
+			Choose your side:
+			</br>
+			<input type = "radio" name ="side"  value = "dark" id = "dark" > Dark side
+			</br>
+			<input type = "radio" name = "side"  value = "light" id = "light"> Light side
+			</span>
+			</br>
+			<input type = "button">
+		</form>
+	</div>
+	<svg height = "600" width = "600" style = "background-color: white;">
+		<polyline
+		id = "line"
+		style = "stroke: red;
+		stroke-width: 5;
+		background-color: white;"
+
+		points = "0 0, 150 50, 0 150"
+		>
+		Line
+		</polyline>
+	</svg>
+
+	<div style="padding:  15px; width: 70px; height: 70px; border: 2px black; background-color: blueviolet;" draggable="true">
+		Просто блок
+	</div>
+	<div dropzone="move" style="padding:  15px; width: 70px; height: 70px; border: 2px black; background-color: red;" ondrop="allert(">
+		Ещё блок
+	</div>
+	<footer class = "footer" style = "background-color: green;">Footer</footer>
+	</body>
+</html>
