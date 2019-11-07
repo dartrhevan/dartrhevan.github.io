@@ -1,0 +1,45 @@
+h1 {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#container {
+    position: absolute;
+    left: 44vw;
+    top: 10vh;
+    height: 50vh;
+    width: 12vw;
+    animation-name: rotate;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    transform-origin: 50% 0 0;
+}
+
+#top {
+    background-color: black;
+    position: relative;
+    left: 4vw;
+    width: 4vw;
+    height: 40vh;
+}
+
+#bottom {
+    background-color: saddlebrown;
+    position: relative;
+    left: 0vw;
+    width: inherit;
+    height: 10vh;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(-60deg);
+
+    }
+    to {
+        transform: rotate(60deg);
+    }
+}
