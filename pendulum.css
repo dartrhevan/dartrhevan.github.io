@@ -1,21 +1,24 @@
-h1 {
+
+#container {
     font-size: 22px;
     font-weight: bold;
     text-align: center;
 }
 
-#container {
-    position: absolute;
-    left: 44vw;
-    top: 10vh;
-    height: 50vh;
-    width: 12vw;
+#pendulum.animate {
     animation-name: rotate;
     animation-duration: 2s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
     animation-direction: alternate-reverse;
     transform-origin: 50% 0 0;
+}
+
+#pendulum {
+    position: relative;
+    left: 44vw;
+    height: 50vh;
+    width: 12vw;
 }
 
 #top {

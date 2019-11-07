@@ -3,13 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <link href="pendulum.css" rel="stylesheet" >
+    <script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="handlers.js"></script>
     <title>Pendulum</title>
 </head>
 <body>
+
+<div id="container">
     <h1>Pendulum</h1>
-    <div id="container">
+    <div id="pendulum" class="">
         <div id="top"></div>
         <div id="bottom"></div>
     </div>
+    <button onclick="startR()">Start</button>
+    <button onclick="stopR()">Stop</button>
+</div>
 </body>
 </html>
