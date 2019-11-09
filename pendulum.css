@@ -6,15 +6,19 @@
 }
 
 #pendulum.animate {
-    animation-name: rotate;
+    /*animation-name: rotate;*/
+
     animation-duration: 2s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
     animation-direction: alternate-reverse;
+    transition: transform ease-in-out;
+    transition-duration: 2s;
     transform-origin: 50% 0 0;
 }
 
 #pendulum {
+    transform: rotate(-60deg);
     position: relative;
     left: 44vw;
     height: 50vh;
@@ -40,7 +44,6 @@
 @keyframes rotate {
     from {
         transform: rotate(-60deg);
-
     }
     to {
         transform: rotate(60deg);
