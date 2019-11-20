@@ -1,17 +1,22 @@
 let intId;
 const leftPos = 'matrix(0.5, 0.866025, -0.866025, 0.5, 0, 0)';
 const rightPos = 'matrix(0.5, -0.866025, 0.866025, 0.5, 0, 0)';
-const width = -0.866025 * 2;
+const width = 0.866025;
 let dir = false;
 
 function startR() {
     const val = Number.parseFloat($('#pendulum').css('transform').split(' ')[1]);
-    $('#pendulum').css('transition-duration', Math.abs(2 * val / width + 's'));
+    let m = 2 * ((dir && val > 0) ? Math.abs(val) : (width - Math.abs(val))) / width;
+    if(m === 0) m = 2;
+    $('#pendulum').css('transition-duration',  m + 's');
+    $('#pendulum').css('transition-function', 'linear');
+    console.log(`v=${val}\nm=${m}`);
     if(dir)
         reverseRotate();
     else directRotate();
     function anim() {
         intId = setTimeout(() => {
+            $('#pendulum').css('transition-function', 'ease-in-out');
             $('#pendulum').css('transition-duration', '2s');
             switch($('#pendulum').css('transform')){
                 case leftPos:

@@ -1,3 +1,10 @@
+body {
+    background: #111111 linear-gradient(#661166 35%, #550055, #222222, #111111) no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
 
 #container {
     font-size: 22px;
@@ -5,32 +12,63 @@
     text-align: center;
 }
 
-#pendulum.animate {
-    /*animation-name: rotate;*/
+.juncture {
+    position: absolute;
+    width: 4%;
+    height: inherit;
+    background-color: black;
+}
 
+.juncture:first-child {
+    left: 7%;
+}
+
+.juncture:last-child {
+    right: 7%;
+}
+
+#pendulum.animate {
     animation-duration: 2s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
     animation-direction: alternate-reverse;
     transition: transform ease-in-out;
     transition-duration: 2s;
-    transform-origin: 50% 0 0;
+    transform-origin: 50% 1vw 0;
 }
 
 #pendulum {
     transform: rotate(-60deg);
-    position: relative;
-    left: 44vw;
-    height: 50vh;
-    width: 12vw;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10vw;
+}
+
+#puck {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: saddlebrown;
+    border-radius: 50%;
+    width: inherit;
+    height: 2vw;
+}
+
+#smallpuck {
+    background-color: white;
+    border-radius: 50%;
+    width: 1vw;
+    height: 1vw;
 }
 
 #top {
     background-color: black;
+    border-radius: 20px 20px 0px 0px;
     position: relative;
     left: 4vw;
-    width: 4vw;
-    height: 40vh;
+    width: 2vw;
+    height: 42vh;
 }
 
 #bottom {
@@ -38,7 +76,8 @@
     position: relative;
     left: 0vw;
     width: inherit;
-    height: 10vh;
+    height: 8vh;
+    border-radius: 15%;
 }
 
 @keyframes rotate {
