@@ -3,7 +3,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 95vh;
+    width: 100%;
 }
 
 #container {
@@ -69,6 +70,21 @@ body {
     left: 4vw;
     width: 2vw;
     height: 42vh;
+}
+
+#surface {
+    height: 2vh;
+    width: 40vw;
+    background-color: black;
+}
+
+button {
+    width: 100px;
+    height: 50px;
+    font-size: 20px;
+    background-color: darkblue;
+    border-radius: 7%;
+    border: none;
 }
 
 #bottom {
